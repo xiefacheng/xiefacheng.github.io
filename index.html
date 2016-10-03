@@ -30,16 +30,18 @@
         .header_text ul li a{text-decoration:none;color: #333333}
         .header_text ul li a:hover{color: #ffffff;background-color:#333333}
         /*中间黄白颜色区域*/
-        .middle_info{height: 380px;margin: 0 auto;background-color:#F1C633; }
-        .middle_text{padding-top: 57px;padding-left: 215px}
+        .middle_info{height: 480px;margin: 0 auto;background-color:#F1C633; }
+        .middle_text{padding-top: 110px;padding-left: 215px}
         .middle_text h1{color: #ffffff;font-size: 55px}
         .middle_text h1 span{color:#333333}
         /*技能*/
         .middle_skill{height:377px;background-color:#333333;}
         .skill_img{height: 112px;width: 95px;position: relative;left: 80px }
         .skill_container{height:256px;width: 260px;float: left;left: 90px;}
-        .skill_div{position: relative;left: 90px}
-
+        .skill_div{position: relative;left: 90px;top: 76px}
+        .skill_container p{color: #ffffff;font-size: 30px;text-align: center;padding-top: 30px;font-weight: bold}
+        .skill_container span{color: #858585;}
+        /*about me */
         .middle_author{
             text-align: center;
             height: 377px;
@@ -57,7 +59,7 @@
             <div class="header_text">
                 <ul>
                     <li><a href="#">Contact</a></li>
-                    <li><a href="#">About me</a></li>
+                    <li><a href="#author">About me</a></li>
                     <li><a href="#">Info</a></li>
                     <li><a href="#">Home</a></li>
                 </ul>
@@ -74,19 +76,42 @@
             <div class="skill_div">
                 <div class="skill_container">
                     <img src="pic-h5.png" class="skill_img"/>
+                     <p>PSD TO HTML</p>
+                    <span>Turn simple HTML ma
+                        rkup into a responsive (mobile friendly) or
+                        fullwidth slider with must-
+                        see-effects and meanwhile keep or buil
+                        d your SEO optimization </span>
                 </div>
                 <div class="skill_container">
                     <img src="pic-css3.png" class="skill_img"/>
+                    <p>DIV+CSS</p>
+                      <span>Turn simple HTML ma
+                        rkup into a responsive (mobile friendly) or
+                        fullwidth slider with must-
+                        see-effects and meanwhile keep or buil
+                        d your SEO optimization </span>
                 </div>
                 <div class="skill_container">
                     <img src="pic-js.png" class="skill_img"/>
+                    <p>JAVASCRIPT</p>
+                      <span>Turn simple HTML ma
+                        rkup into a responsive (mobile friendly) or
+                        fullwidth slider with must-
+                        see-effects and meanwhile keep or buil
+                        d your SEO optimization </span>
                 </div>
             </div>
         </div>
         <!--ABOUT ME-->
-        <div class="middle_author">
-            <div class="author_title"><h1>ABOUT ME</h1></div>
-        </div>
+        <a name="author"><div class="middle_author">
+
+                <h1 style="color:#333333;">ABOUT ME</h1>
+            <div class="author_details">
+                <div class="author_head"><img src="xfc.png" alt="xfc"/></div>
+                <span style="color:#333333;font-weight: bold;font-size: 20px">Chengdu Neusoft University|CST|Software Testing</span>
+            </div>
+        </div></a>
     </div>
 </body>
 </html>
