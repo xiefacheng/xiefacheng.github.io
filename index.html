@@ -4,52 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        .container{width: 980px;margin: 0 auto}
-        .nav{height: 108px;margin: 0 auto;background-color: #ffffff;width:980px;}
-        /*图片me*/
-        .header_img{
-            padding-top: 15px;
-            padding-left: 77px;
-            float: left;
-
-        }
-        /*导航列表*/
-        .header_text ul li{list-style-type:none;
-            font-size: 30px;
-            font-weight:bold;
-            float:right;
-            margin-left: 20px;
-            padding: 60px 58px 11px 10px;
-        }
-        /*导航字母下划线*/
-        .header_text ul li a{text-decoration:none;color: #333333}
-        .header_text ul li a:hover{color: #ffffff;background-color:#333333}
-        /*中间黄白颜色区域*/
-        .middle_info{height: 480px;margin: 0 auto;background-color:#F1C633; }
-        .middle_text{padding-top: 110px;padding-left: 215px}
-        .middle_text h1{color: #ffffff;font-size: 55px}
-        .middle_text h1 span{color:#333333}
-        /*技能*/
-        .middle_skill{height:377px;background-color:#333333;}
-        .skill_img{height: 112px;width: 95px;position: relative;left: 80px }
-        .skill_container{height:256px;width: 260px;float: left;left: 90px;}
-        .skill_div{position: relative;left: 90px;top: 76px}
-        .skill_container p{color: #ffffff;font-size: 30px;text-align: center;padding-top: 30px;font-weight: bold}
-        .skill_container span{color: #858585;}
-        /*about me */
-        .middle_author{
-            text-align: center;
-            height: 377px;
-            background-color: #F5F5F5;
-            margin: 0 auto;
-        }
-        .middle_author h1{padding-top: 20px}
-    </style>
+    <link rel="stylesheet" href="index_css.css" type="text/css"/>
 </head>
 <body>
     <div class="container">
@@ -58,9 +13,9 @@
             <div class="header_img"><img src="me.png"/></div>
             <div class="header_text">
                 <ul>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#info">Info</a></li>
                     <li><a href="#author">About me</a></li>
-                    <li><a href="#">Info</a></li>
                     <li><a href="#">Home</a></li>
                 </ul>
             </div>
@@ -108,10 +63,34 @@
 
                 <h1 style="color:#333333;">ABOUT ME</h1>
             <div class="author_details">
-                <div class="author_head"><img src="xfc.png" alt="xfc"/></div>
+                <div class="author_head" style="display: block"><img src="img/gray_head.png" id="defaultImg" alt="head" onmouseover="show('img/xfc.png')"  /></div>
+                <!--<div class="author_head2" style="display: none" ><img src="xfc.png" alt="head"/></div>-->
                 <span style="color:#333333;font-weight: bold;font-size: 20px">Chengdu Neusoft University|CST|Software Testing</span>
+                <div class="author_details_text">
+                    <p> Lorem ipsum dolor sit amet consectetur adip
+                        iscing elit in id malesuada
+                        lectus aenean convallis interdum gravid
+                        a donec faucibus bibendum tortor vel facilisis</p>
+                </div>
             </div>
         </div></a>
+        <!--info-->
+        <a name="info">
+        <div class="info_container">
+
+        </div>
+        </a>
+        <!--contact-->
+        <a name="contact">
+        <div class="contact_container">
+
+        </div>
+        </a>
     </div>
+    <script>
+        function show(src){
+        document.getElementById("defaultImg").src=src;
+        }
+    </script>
 </body>
 </html>
