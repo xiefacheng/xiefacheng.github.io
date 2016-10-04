@@ -38,12 +38,15 @@
 .skill_container p{color: #ffffff;font-size: 30px;text-align: center;padding-top: 30px;font-weight: bold}
 .skill_container span{color: #858585;}
 /*about me */
+#xfc{position: absolute;left: 0px}
+
 .middle_author{
     text-align: center;
     height: 400px;
     background-color: #F1C633;
     margin: 0 auto;
 }
+.author_head{height:116px;width: 116px;position:relative }
 .author_details_text{width: 400px;height: 200px;color: #ffffff}
 .middle_author h1{padding-top: 20px}
 /*info*/
