@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
     <link rel="stylesheet" href="index_css.css" type="text/css"/>
 </head>
 <body>
@@ -61,8 +62,10 @@
                 <h1 style="color:#ffffff;">ABOUT ME</h1>
             <div class="author_details">
                 <div class="author_head">
-                    <img src="images/gray_head.png" id="defaultImg" alt="head" onmouseover="show('images/xfc.png')"  />
+                    <img src="images/gray_head.png"  alt="head" id="gray" />
+                    <img src="images/xfc.png" style="display: none" alt="head" id="xfc" />
                 </div>
+
                 <span style="color:#333333;font-weight: bold;font-size: 20px">Xiefacheng <br/>Birthday 1995.11 <br/>Chengdu Neusoft University|CST|Software Testing</span>
                 <div class="author_details_text">
                     <p> Lorem ipsum dolor sit amet consectetur adip
@@ -126,9 +129,14 @@
         </a>
     </div>
     <script>
-        function show(src){
-        document.getElementById("defaultImg").src=src;
-        }
+        $(document).ready(function(){
+            $('.author_head').hover(function(){
+                $("#xfc").fadeIn("slow");
+            },function(){
+                $("#xfc").fadeOut("gray");
+            })
+        })
+
     </script>
 </body>
 </html>
