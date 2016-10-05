@@ -4,28 +4,26 @@
 
 }
 .container{width: 980px;}
-.nav{height: 108px;margin: 0 auto;background-color: #ffffff;width:980px;}
+.nav{height: 108px;margin: 0 auto;background-color: #ffffff;}
 /*图片me*/
 .header_img{
     padding-top: 15px;
     padding-left: 77px;
     float: left;
-
-
 }
-/*导航列表*/
-.header_text ul li{list-style-type:none;
-    font-size: 30px;
+/*导航以及特效*/
+.nav ul li{list-style-type:none;
+    text-decoration:none;color: #333333;font-size: 30px;
     font-weight:bold;
     float:right;
-    margin-left: 20px;
-    padding: 60px 58px 11px 10px;
+    margin-right: 80px;
+    margin-top: 60px;
+    cursor: pointer;
+    transition: all 0.6s;
 }
-/*导航文字以及特效*/
 
-.header_text ul li a{text-decoration:none;color: #333333;cursor: pointer;
-    transition: all 0.6s;}
-.header_text ul li a:hover{color: #ffffff;background-color:#333333;transform: scale(1.2);}
+.nav ul li:hover{color: #ffffff;background:#333333 ;transform: scale(1.2);
+}
 /*中间黄白颜色区域*/
 .middle_info{height: 480px;background-color:#F1C633;z-index: -1;position: relative }
 .middle_text{padding-top: 110px;padding-left: 215px}
