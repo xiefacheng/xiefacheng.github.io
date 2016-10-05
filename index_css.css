@@ -21,10 +21,11 @@
     margin-left: 20px;
     padding: 60px 58px 11px 10px;
 }
-/*导航字母下划线*/
+/*导航文字以及特效*/
 
-.header_text ul li a{text-decoration:none;color: #333333}
-.header_text ul li a:hover{color: #ffffff;background-color:#333333}
+.header_text ul li a{text-decoration:none;color: #333333;cursor: pointer;
+    transition: all 0.6s;}
+.header_text ul li a:hover{color: #ffffff;background-color:#333333;transform: scale(1.2);}
 /*中间黄白颜色区域*/
 .middle_info{height: 480px;background-color:#F1C633;z-index: -1;position: relative }
 .middle_text{padding-top: 110px;padding-left: 215px}
@@ -82,4 +83,5 @@ height: 40px;position:relative;top: 25px;color:#333333;font-weight: bold;font-si
 .contact_other{position: absolute;bottom: 10px;left: 330px}
 .contact_other img{margin-left: 30px;height: 40px;border: 0px;
     width: 40px;}
+
 /*.contact_container span{color: #ffffff;font-weight: bold;font-size: 40px;position: relative;top: 40px}*/
