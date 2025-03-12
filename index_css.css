@@ -1,85 +1,148 @@
+/* 保留你原有的基础样式 */
 * {
     margin: 0 auto;
     padding: 0;
-
-}
-.container{width: 980px;}
-.nav{height: 108px;margin: 0 auto;background-color: #ffffff;}
-/*图片me*/
-.header_img{
-    padding-top: 15px;
-    padding-left: 77px;
-    float: left;
-}
-/*导航以及特效*/
-.nav ul li{list-style-type:none;
-    text-decoration:none;color: #333333;font-size: 30px;
-    font-weight:bold;
-    float:right;
-    margin-right: 80px;
-    margin-top: 60px;
-    cursor: pointer;
-    transition: all 0.6s;
+    box-sizing: border-box; /* 新增 */
 }
 
-.nav ul li:hover{color: #ffffff;background:#333333 ;transform: scale(1.2);
-}
-/*中间黄白颜色区域*/
-.middle_info{height: 480px;background-color:#F1C633;z-index: -1;position: relative }
-.middle_text{padding-top: 110px;padding-left: 215px}
-.middle_text h1{color: #ffffff;font-size: 55px}
-.middle_text h1 span{color:#333333}
-/*技能*/
-.middle_skill{height:377px;background-color:#333333;}
-.skill_img{height: 112px;width: 95px;position: relative;left: 80px }
-.skill_container{height:256px;width: 260px;float: left;left: 90px;}
-.skill_div{position: relative;left: 90px;top: 76px}
-.skill_container p{color: #ffffff;font-size: 30px;text-align: center;padding-top: 30px;font-weight: bold}
-.skill_container span{color: #858585;}
-/*about me */
-#xfc{position: absolute;left: 0px}
-#gray{position: absolute;left: 0px}
-.middle_author{
-    text-align: center;
-    height: 400px;
-    background-color: #F1C633;
+.container {
+    width: 100%;
+    max-width: 980px; /* 修改为响应式 */
     margin: 0 auto;
 }
-.author_head{height:116px;width: 116px;position:relative }
-.author_details_text{width: 400px;height: 200px;color: #ffffff}
-.middle_author h1{padding-top: 20px}
-/*info*/
-.info_container{
-    height: 530px;
-    background-color: #F5F5F5;
-    text-align: center;
-}
-.info_span{
-height: 40px;position:relative;top: 25px;color:#333333;font-weight: bold;font-size: 40px;
-}
-.info_img{
-    height: 172px;width: 304px;float: left;margin-left: 17px;margin-top: 50px;
-    cursor: pointer;
-    transition: all 0.6s;
-}
-.info_img:hover{
-    transform: scale(1.1);
-}
-/*contact*/
-/*.contact_container div{border: 1px solid #ff0000}*/
-.contact_container{
-    position: relative;
-    height: 330px;
-    background-color:#12151B;text-align: center;
 
+/* 导航栏响应式改造 */
+.nav {
+    height: auto; /* 修改高度自适应 */
+    padding: 20px;
+    display: flex; /* 新增 */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
-.contact_text{height: 300px;width: 400px;float: left;margin-top: 30px}
-.contact_container h2{color: #f5f5f5;font-size: 18px}
-.contact_container a{text-decoration: none;color: #F1C633}
-.contact_container p{color: darkgrey;font-size: 15px;text-align: center;
-    padding-left: 15px;padding-right: 15px;padding-top: 20px;letter-spacing:1px; line-height:20px;   }
-.contact_other{position: absolute;bottom: 10px;left: 330px}
-.contact_other img{margin-left: 30px;height: 40px;border: 0px;
-    width: 40px;}
 
-/*.contact_container span{color: #ffffff;font-weight: bold;font-size: 40px;position: relative;top: 40px}*/
+.header_img {
+    padding: 15px 0 0 0; /* 简化padding */
+    float: none; /* 移除浮动 */
+}
+
+/* 导航菜单响应式 */
+.nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* 代替固定margin */
+    margin-top: 0; /* 移除原有margin */
+}
+
+.nav ul li {
+    float: none; /* 移除浮动 */
+    margin: 0; /* 移除固定margin */
+    font-size: clamp(20px, 3vw, 30px); /* 响应式字体 */
+}
+
+/* 中间区域响应式 */
+.middle_info {
+    height: auto; /* 修改固定高度 */
+    padding: 80px 20px;
+}
+
+.middle_text {
+    padding: 0 20px; /* 代替固定padding */
+    text-align: center; /* 新增 */
+}
+
+.middle_text h1 {
+    font-size: clamp(32px, 5vw, 55px); /* 响应式字体 */
+}
+
+/* 技能区域响应式 */
+.middle_skill {
+    height: auto;
+    padding: 60px 20px;
+}
+
+.skill_div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    left: 0; /* 移除固定定位 */
+    position: static;
+}
+
+.skill_container {
+    width: auto; 
+    float: none; /* 移除浮动 */
+    margin: 0;
+}
+
+/* About Me 区域调整 */
+.middle_author {
+    height: auto;
+    padding: 40px 20px;
+}
+
+.author_details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 图片网格响应式 */
+.info_container {
+    height: auto;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.info_img {
+    width: 100%;
+    height: 200px; /* 保持比例 */
+    margin: 0;
+    float: none; /* 移除浮动 */
+}
+
+/* 联系区域响应式 */
+.contact_container {
+    height: auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.contact_text {
+    width: 100%;
+    max-width: 400px;
+    float: none; /* 移除浮动 */
+}
+
+/* 响应式断点 */
+@media (max-width: 768px) {
+    .nav ul {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .skill_img {
+        left: 0; /* 移动端居中 */
+        margin: 0 auto;
+    }
+    
+    .contact_other {
+        position: static;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .middle_text h1 {
+        font-size: 28px;
+    }
+    
+    .info_img {
+        height: 150px;
+    }
+}
